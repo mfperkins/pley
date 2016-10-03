@@ -180,3 +180,31 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /Users/ewansheldon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/ewansheldon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.9ms)
   Rendered /Users/ewansheldon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (188.1ms)
+Started GET "/" for ::1 at 2016-10-03 16:19:38 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 649ms (Views: 631.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 16:28:35 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 327ms (Views: 316.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/review/new" for ::1 at 2016-10-03 16:28:42 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 74ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/review/new" for ::1 at 2016-10-03 16:33:00 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 322ms (Views: 311.1ms | ActiveRecord: 0.0ms)
+
+
