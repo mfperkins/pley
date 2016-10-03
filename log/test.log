@@ -322,3 +322,72 @@ Processing by ReviewController#create as HTML
 No template found for ReviewController#create, rendering head :no_content
 Completed 204 No Content in 51ms (ActiveRecord: 0.0ms)
   [1m[35m (2.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/review/new" for 127.0.0.1 at 2016-10-03 18:22:53 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (83.1ms)
+Completed 200 OK in 425ms (Views: 402.3ms | ActiveRecord: 0.0ms)
+Started POST "/review" for 127.0.0.1 at 2016-10-03 18:22:53 +0100
+Processing by ReviewController#create as HTML
+  Parameters: {"utf8"=>"✓", "review"=>{"rating"=>"4", "comment"=>"What a wonderful meal we had, thoroughly recommend it, the digestion and excretion were well facilitated too"}, "commit"=>"button"}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (7.8ms)[0m  [1m[32mINSERT INTO "reviews" ("rating", "comment", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["rating", 4], ["comment", "What a wonderful meal we had, thoroughly recommend it, the digestion and excretion were well facilitated too"], ["created_at", 2016-10-03 17:22:53 UTC], ["updated_at", 2016-10-03 17:22:53 UTC]]
+  [1m[35m (5.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/review/1
+Completed 302 Found in 44ms (ActiveRecord: 19.9ms)
+Started GET "/review/1" for 127.0.0.1 at 2016-10-03 18:22:53 +0100
+Processing by ReviewController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering review/show.html.erb within layouts/application
+  Rendered review/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/review/new" for 127.0.0.1 at 2016-10-03 18:22:53 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+Started POST "/review" for 127.0.0.1 at 2016-10-03 18:22:53 +0100
+Processing by ReviewController#create as HTML
+  Parameters: {"utf8"=>"✓", "review"=>{"rating"=>"4", "comment"=>"What a wonderful meal we had, thoroughly recommend it, the digestion and excretion were well facilitated too"}, "commit"=>"button"}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("rating", "comment", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["rating", 4], ["comment", "What a wonderful meal we had, thoroughly recommend it, the digestion and excretion were well facilitated too"], ["created_at", 2016-10-03 17:22:53 UTC], ["updated_at", 2016-10-03 17:22:53 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/review/2
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+Started GET "/review/2" for 127.0.0.1 at 2016-10-03 18:22:53 +0100
+Processing by ReviewController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering review/show.html.erb within layouts/application
+  Rendered review/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/review/new" for 127.0.0.1 at 2016-10-03 18:23:35 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 335ms (Views: 323.4ms | ActiveRecord: 0.0ms)
+Started POST "/review" for 127.0.0.1 at 2016-10-03 18:23:35 +0100
+Processing by ReviewController#create as HTML
+  Parameters: {"utf8"=>"✓", "review"=>{"rating"=>"4", "comment"=>"What a wonderful meal we had, thoroughly recommend it, the digestion and excretion were well facilitated too"}, "commit"=>"button"}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "reviews" ("rating", "comment", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["rating", 4], ["comment", "What a wonderful meal we had, thoroughly recommend it, the digestion and excretion were well facilitated too"], ["created_at", 2016-10-03 17:23:35 UTC], ["updated_at", 2016-10-03 17:23:35 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/review/3
+Completed 302 Found in 23ms (ActiveRecord: 4.8ms)
+Started GET "/review/3" for 127.0.0.1 at 2016-10-03 18:23:35 +0100
+Processing by ReviewController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering review/show.html.erb within layouts/application
+  Rendered review/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 5.1ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
