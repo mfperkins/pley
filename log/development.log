@@ -757,3 +757,304 @@ app/controllers/review_controller.rb:10:in `create'
   Rendering /Users/AlfieBullmore/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/AlfieBullmore/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
   Rendered /Users/AlfieBullmore/.rvm/gems/ruby-2.3.0@global/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (143.2ms)
+Started GET "/" for ::1 at 2016-10-03 18:04:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7879657152328300920);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateReviews (20161003163311)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.2ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" serial primary key, "rating" integer, "comment" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161003163311"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7879657152328300920)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'reviews'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/" for ::1 at 2016-10-03 18:05:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 285ms (Views: 274.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/review/new" for ::1 at 2016-10-03 18:05:29 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/review" for ::1 at 2016-10-03 18:05:37 +0100
+Processing by ReviewController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ov67a1khkeuNhzj7c22L6VnsZStcmqf9uslgLQTvyvrJUzk2YsYCkt2kT6DrJ+JvemXAhLCBWmLRtt40YspzKA==", "review"=>{"rating"=>"67", "comment"=>"a lot of happy"}, "commit"=>"button"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "reviews" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2016-10-03 17:05:37 UTC], ["updated_at", 2016-10-03 17:05:37 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/review/1
+Completed 302 Found in 27ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/review/1" for ::1 at 2016-10-03 18:05:37 +0100
+Processing by ReviewController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering review/show.html.erb within layouts/application
+  Rendered review/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 22.1ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7879657152328300920);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7879657152328300920)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'reviews'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started POST "/review" for ::1 at 2016-10-03 18:09:06 +0100
+Processing by ReviewController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ov67a1khkeuNhzj7c22L6VnsZStcmqf9uslgLQTvyvrJUzk2YsYCkt2kT6DrJ+JvemXAhLCBWmLRtt40YspzKA==", "review"=>{"rating"=>"67", "comment"=>"a lot of happy"}, "commit"=>"button"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2016-10-03 17:09:06 UTC], ["updated_at", 2016-10-03 17:09:06 UTC]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/review/2
+Completed 302 Found in 22ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/review/2" for ::1 at 2016-10-03 18:09:06 +0100
+Processing by ReviewController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering review/show.html.erb within layouts/application
+  Rendered review/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/review/2" for ::1 at 2016-10-03 18:13:55 +0100
+Processing by ReviewController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering review/show.html.erb within layouts/application
+  Rendered review/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 44ms (Views: 33.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/review/new" for ::1 at 2016-10-03 18:14:05 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/review" for ::1 at 2016-10-03 18:14:12 +0100
+Processing by ReviewController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QRmhOsKz8+XcCBW6CO4HteEN7bsM8qRt5jpOQ23ZzekqtCNn+VRgnIwrYuGQpG4zwoRIFODpWfKNRfBaC/x0Ow==", "review"=>{"rating"=>"676", "comment"=>"hghjghjg"}, "commit"=>"button"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2016-10-03 17:14:12 UTC], ["updated_at", 2016-10-03 17:14:12 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/review/3
+Completed 302 Found in 8ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/review/3" for ::1 at 2016-10-03 18:14:12 +0100
+Processing by ReviewController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering review/show.html.erb within layouts/application
+  Rendered review/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 40ms (Views: 35.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/review/new" for ::1 at 2016-10-03 18:14:52 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+SyntaxError (/Users/tamborine/Documents/projects/pley/app/controllers/review_controller.rb:10: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    p "its over here dumbasssssssss" params[:rating]
+                                           ^):
+  
+app/controllers/review_controller.rb:10: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.3ms)
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.1ms)
+Started GET "/review/new" for ::1 at 2016-10-03 18:15:07 +0100
+  
+SyntaxError (/Users/tamborine/Documents/projects/pley/app/controllers/review_controller.rb:10: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    puts "its over here dumbasssssssss" params[:rating]
+                                              ^):
+  
+app/controllers/review_controller.rb:10: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.5ms)
+Started GET "/review/new" for ::1 at 2016-10-03 18:15:08 +0100
+  
+SyntaxError (/Users/tamborine/Documents/projects/pley/app/controllers/review_controller.rb:10: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+    puts "its over here dumbasssssssss" params[:rating]
+                                              ^):
+  
+app/controllers/review_controller.rb:10: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.3ms)
+Started GET "/review/new" for ::1 at 2016-10-03 18:15:41 +0100
+  
+SyntaxError (/Users/tamborine/Documents/projects/pley/app/controllers/review_controller.rb:10: syntax error, unexpected '}', expecting =>
+    puts "its over here dumbasssssssss #{{params[:rating]}}" 
+                                                          ^
+/Users/tamborine/Documents/projects/pley/app/controllers/review_controller.rb:10: unterminated string meets end of file):
+  
+app/controllers/review_controller.rb:10: syntax error, unexpected '}', expecting =>
+app/controllers/review_controller.rb:10: unterminated string meets end of file
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tamborine/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.3ms)
+Started GET "/review/new" for ::1 at 2016-10-03 18:15:53 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 252ms (Views: 249.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/review" for ::1 at 2016-10-03 18:15:59 +0100
+Processing by ReviewController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TFhfxYSMAeX/P+N7/4vCAITn33F4rKoVnrBIhstaxswn9d2Yv2uSnK8clCBnwauGp2563pS3V4r1z/afrX9/Hg==", "review"=>{"rating"=>"3", "comment"=>"kjkklj"}, "commit"=>"button"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2016-10-03 17:15:59 UTC], ["updated_at", 2016-10-03 17:15:59 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/review/4
+Completed 302 Found in 25ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/review/4" for ::1 at 2016-10-03 18:15:59 +0100
+Processing by ReviewController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering review/show.html.erb within layouts/application
+  Rendered review/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 28.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/review/new" for ::1 at 2016-10-03 18:18:39 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 311ms (Views: 298.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/review" for ::1 at 2016-10-03 18:18:46 +0100
+Processing by ReviewController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wsRu7ApF4AWTScMJClEC7M8Bwu2M4TAdK4gKLCzTBcqpaeyxMaJzfMNqtFKSG2tq7IhnQmD6zYJA97Q1Sva8GA==", "review"=>{"rating"=>"33", "comment"=>"dfgdfgdf"}, "commit"=>"button"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "reviews" ("rating", "comment", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["rating", 33], ["comment", "dfgdfgdf"], ["created_at", 2016-10-03 17:18:46 UTC], ["updated_at", 2016-10-03 17:18:46 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/review/5
+Completed 302 Found in 24ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/review/5" for ::1 at 2016-10-03 18:18:46 +0100
+Processing by ReviewController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering review/show.html.erb within layouts/application
+  Rendered review/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 45ms (Views: 34.0ms | ActiveRecord: 1.6ms)
+
+
