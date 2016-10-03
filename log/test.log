@@ -82,3 +82,75 @@ Processing by ReviewController#new as HTML
 Completed 200 OK in 216ms (Views: 200.8ms | ActiveRecord: 0.0ms)
 Started POST "/review/new" for 127.0.0.1 at 2016-10-03 16:34:18 +0100
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/review/new" for 127.0.0.1 at 2016-10-03 16:36:57 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (75.9ms)
+Completed 200 OK in 558ms (Views: 540.8ms | ActiveRecord: 0.0ms)
+Started POST "/review/new" for 127.0.0.1 at 2016-10-03 16:36:58 +0100
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/review/new" for 127.0.0.1 at 2016-10-03 16:39:35 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (39.0ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/review/new" for 127.0.0.1 at 2016-10-03 16:40:00 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (79.5ms)
+Completed 200 OK in 408ms (Views: 389.2ms | ActiveRecord: 0.0ms)
+Started POST "/review/new" for 127.0.0.1 at 2016-10-03 16:40:00 +0100
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/review/new" for 127.0.0.1 at 2016-10-03 16:41:37 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 204ms (Views: 192.2ms | ActiveRecord: 0.0ms)
+Started POST "/review/new" for 127.0.0.1 at 2016-10-03 16:41:38 +0100
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/review/new" for 127.0.0.1 at 2016-10-03 16:42:07 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (37.5ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/review/new" for 127.0.0.1 at 2016-10-03 16:44:33 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (42.9ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/review/new" for 127.0.0.1 at 2016-10-03 16:45:19 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/review/new" for 127.0.0.1 at 2016-10-03 16:50:35 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (69.8ms)
+Completed 200 OK in 404ms (Views: 388.0ms | ActiveRecord: 0.0ms)
+Started POST "/review" for 127.0.0.1 at 2016-10-03 16:50:36 +0100
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/review/new" for 127.0.0.1 at 2016-10-03 16:52:15 +0100
+Processing by ReviewController#new as HTML
+  Rendering review/new.html.erb within layouts/application
+  Rendered review/new.html.erb within layouts/application (74.2ms)
+Completed 200 OK in 412ms (Views: 397.9ms | ActiveRecord: 0.0ms)
+Started POST "/review" for 127.0.0.1 at 2016-10-03 16:52:15 +0100
+Processing by ReviewController#create as HTML
+  Parameters: {"utf8"=>"✓", "review"=>{"rating"=>"4", "comment"=>"What a wonderful meal we had, thoroughly recommend it, the digestion and excretion were well facilitated too"}, "commit"=>"button"}
+No template found for ReviewController#create, rendering head :no_content
+Completed 204 No Content in 58ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
