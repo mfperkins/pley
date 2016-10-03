@@ -1,0 +1,15 @@
+<%= form_for :review, url: review_index_path do |f| %>
+  <p>
+    <%= f.label :rating %><br>
+    <%= f.number_field :rating %>
+  </p>
+
+  <p>
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment %>
+  </p>
+
+  <p>
+    <%= f.submit :button %>
+  </p>
+<% end %>
