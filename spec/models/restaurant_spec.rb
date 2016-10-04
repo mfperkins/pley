@@ -11,11 +11,9 @@ describe Restaurant do
     end
 
     it 'should calculate an average rating' do
-      puts restaurant.ave_of_reviews
       expect(restaurant.ave_of_reviews).to eq(2.5)
     end
 
   end
-
 
 end
