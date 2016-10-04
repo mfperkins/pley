@@ -34,3 +34,15 @@ describe 'editing a restaurant' do
     expect(page).to have_content 'Prophète'
   end
 end
+
+describe 'deleting a restaurant' do
+  before(:each) do
+    @restaurant = Restaurant.new({name: "Rubbish Restaurant", description: "It should be deleted"})
+    @restaurant.save
+  end
+
+  it 'should allow user to delete a restaurant' do
+    visit '/restaurants'
+    expect {click_link('Delete Restaurant')}.to change(Restaurant, :count).by(-1)
+  end
+end
