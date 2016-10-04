@@ -1,7 +1,10 @@
 <h1><%= @restaurant.name %></h1>
   <p><%= @restaurant.description %></p>
 <%= button_to "Add Review", new_restaurant_review_path(:restaurant_id => @restaurant.id), method: :get %>
-
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
+<%= link_to 'Delete Restaurant', restaurant_path(@restaurant),
+        method: :delete,
+        data: { confirm: 'Erm, really Dingy?' } %>
 <% i = 0 %>
   <p><% @restaurant.reviews.each do |review| %>
     <% i += 1 %>
