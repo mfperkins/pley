@@ -1,2 +1,4 @@
 <h1><%= @restaurant.name %></h1>
 <p><%= @restaurant.description %></p>
+
+<%= button_to "Add Review", new_restaurant_review_path(:restaurant_id => @restaurant.id), method: :get %>
