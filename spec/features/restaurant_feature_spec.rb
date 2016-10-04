@@ -19,3 +19,18 @@ describe 'restaurant list' do
     expect(page).to have_content 'Prophète'
   end
 end
+
+describe 'editing a restaurant' do
+  before(:each) do
+    @restaurant = Restaurant.new({name: "Restaurant", description: "A good restaurant"})
+    @restaurant.save
+  end
+
+  it 'should allow user to update a restaurant' do
+    visit '/restaurants/3/edit'
+    fill_in 'restaurant[name]', with: 'Prophète'
+    fill_in 'restaurant[description]', with: 'a quite pretentious restaurant'
+    click_button('Save Restaurant')
+    expect(page).to have_content 'Prophète'
+  end
+end
