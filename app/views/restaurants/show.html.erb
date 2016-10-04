@@ -1,2 +1,14 @@
 <h1><%= @restaurant.name %></h1>
-<p><%= @restaurant.description %></p>
+  <p><%= @restaurant.description %></p>
+<%= button_to "Add Review", new_restaurant_review_path(:restaurant_id => @restaurant.id), method: :get %>
+
+<% i = 0 %>
+  <p><% @restaurant.reviews.each do |review| %>
+    <% i += 1 %>
+    <h2>Review: <%= i %> </h2>
+   <li>
+     Rating: <%= review.rating %>
+     Comment: <%= review.comment %>
+   </li>
+  <% end %>
+  </p>
