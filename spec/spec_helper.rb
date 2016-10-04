@@ -27,7 +27,7 @@ RSpec.configure do |config|
 
   config.include FeatureHelpers, :type => :feature
 
-  config.before(:suite) do
+  config.before(:each) do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
   end
@@ -36,6 +36,10 @@ RSpec.configure do |config|
     DatabaseCleaner.cleaning do
       example.run
     end
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.strategy = :truncation
   end
 
   config.before(:each) do
