@@ -7,8 +7,8 @@ class ReviewController < ApplicationController
   end
 
   def create
-    puts "its over here dumbasssssssss #{params[:review]}"
-    @review = Review.new(params.require(:review).permit(:rating, :comment))
+    puts "thisssssss #{@restaurant}"
+    @review = @restaurant.reviews.create(params.require(:review).permit(:rating, :comment))
 
     @review.save
     redirect_to @review
