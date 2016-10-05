@@ -42,7 +42,7 @@ describe 'deleting a restaurant' do
   end
 
   it 'should allow user to delete a restaurant' do
-    visit '/restaurants'
+    visit '/restaurants/1'
     expect {click_link('Delete Restaurant')}.to change(Restaurant, :count).by(-1)
   end
 end
