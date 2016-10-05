@@ -11,11 +11,6 @@
   <body>
     <%= render "layouts/nav" %>
      <div id="content_container" class="container theme-showcase" role="main">
-       <% if user_signed_in? %>
-       <div>
-         <p>Welcome <%= current_user.email %></p>
-       </div>
-       <% end %>
        <%= yield %>
     </div>
   </body>
