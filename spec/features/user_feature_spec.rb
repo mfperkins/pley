@@ -28,4 +28,14 @@ describe 'user actions' do
     click_button('Log in')
     expect(page).to have_content 'rosie@allott.com'
   end
+
+  it 'should not allow a bad user to log in' do
+    find('#dropdown_box').click
+    click_on("Log In")
+    user_log_in
+    click_button('Log in')
+    expect(page).not_to have_content 'rosie@allott.com'
+    expect(page).to have_content 'Invalid Email or password.'
+
+  end
 end
