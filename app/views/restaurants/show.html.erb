@@ -1,5 +1,6 @@
 <h1><%= @restaurant.name %></h1>
   <p><%= @restaurant.description %></p>
+  <h4><p>Rating: <%= @restaurant.ave_of_reviews %></p></h4>
 <%= button_to "Add Review", new_restaurant_review_path(:restaurant_id => @restaurant.id), method: :get %>
 
 <% i = 0 %>
