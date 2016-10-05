@@ -1,12 +1,16 @@
 class RestaurantsController < ApplicationController
   def new
+    flash[:notice]
   end
 
   def create
-    @restaurant = Restaurant.new(restaurant_params)
-
-    @restaurant.save
-    redirect_to @restaurant
+    @restaurant = Restaurant.create(restaurant_params)
+      if @restaurant.save
+        redirect_to @restaurant
+      else
+        flash[:notice] = @restaurant.errors.full_messages.join(", ")
+        redirect_to new_restaurant_path
+      end
   end
 
   def show

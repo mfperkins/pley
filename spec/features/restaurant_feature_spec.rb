@@ -46,3 +46,14 @@ describe 'deleting a restaurant' do
     expect {click_link('Delete Restaurant')}.to change(Restaurant, :count).by(-1)
   end
 end
+
+describe 'validations' do
+  it 'should not allow visitor to enter empty restaurant name' do
+    visit '/restaurants/new'
+    fill_in 'restaurant[name]', with: ''
+    fill_in 'restaurant[description]', with: 'a quite pretentious restaurant'
+    click_button('Save Restaurant')
+    expect(page).to have_current_path '/restaurants/new'
+    expect(page).to have_content "Name can't be blank"
+  end
+end
