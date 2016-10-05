@@ -13,20 +13,21 @@
     <p>Rating: <%= @restaurant.ave_of_reviews %></p>
   </div>
 </div>
-<div class="row">
-  <div class="col-md-12">
-    <ul class="list-inline">
-      <li><h5 class="strong">Update restaurant:</h5></li>
-      <li><%= link_to 'Edit', edit_restaurant_path(@restaurant), :class => "btn btn-xs btn-primary" %></li>
-      <li><%= link_to 'Delete', restaurant_path(@restaurant),
-              :class => "btn btn-xs btn-danger",
-              method: :delete,
-              data: { confirm: 'Erm, really Dingy?' } %></li>
-    </ul>
+<% if user_signed_in? %>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-inline">
+        <li><h5 class="strong">Update restaurant:</h5></li>
+        <li><%= link_to 'Edit', edit_restaurant_path(@restaurant), :class => "btn btn-xs btn-primary" %></li>
+        <li><%= link_to 'Delete', restaurant_path(@restaurant),
+                :class => "btn btn-xs btn-danger",
+                method: :delete,
+                data: { confirm: 'Erm, really Dingy?' } %></li>
+      </ul>
+    </div>
   </div>
-</div>
+<% end %>
 <hr>
-
 <div class="row">
   <div class="col-md-8">
     <h2>Reviews</h2>
