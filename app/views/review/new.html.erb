@@ -12,4 +12,9 @@
   <p>
     <%= f.submit :Submit %>
   </p>
+  <% if flash[:notice] %>
+    <div class="alert alert-danger" role="alert">
+    <%= flash[:notice] %>
+    </div>
+  <% end %>
 <% end %>
