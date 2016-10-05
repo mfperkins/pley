@@ -1,4 +1,4 @@
-describe 'user sign up' do
+describe 'user actions' do
 
   before(:each) do
     user_sign_up
@@ -15,5 +15,17 @@ describe 'user sign up' do
     find('#dropdown_box').click
     click_on("Log Out")
     expect(page).to_not have_content 'rosie@allott.com'
+  end
+
+  it 'should allow user to log in' do
+    click_button('Sign up')
+    visit ('/')
+    find('#dropdown_box').click
+    click_on('Log Out')
+    find('#dropdown_box').click
+    click_on("Log In")
+    user_log_in
+    click_button('Log in')
+    expect(page).to have_content 'rosie@allott.com'
   end
 end

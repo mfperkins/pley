@@ -26,5 +26,10 @@ module FeatureHelpers
     fill_in 'user[password_confirmation]', with: "password"
   end
 
+  def user_log_in
+    fill_in 'user[email]', with: "rosie@allott.com"
+    fill_in 'user[password]', with: "password"
+  end
+
 
 end
