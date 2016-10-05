@@ -10,6 +10,7 @@ end
 
 describe 'restaurant list' do
   before(:each) do
+    user_sign_up
     create_restaurant('Pizzeria')
   end
 
