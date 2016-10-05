@@ -4,7 +4,7 @@ describe 'creating restaurant entry', type: :feature do
   it 'creates a new entry in restaurant table' do
     create_restaurant
     expect {click_button('Save Restaurant')}.to change(Restaurant, :count).by(1)
-    expect(page).to have_current_path('/restaurants/2')
+    expect(page).to have_current_path('/restaurants/1')
     expect(page).to have_content('Pizzeria')
   end
 end
@@ -27,7 +27,7 @@ describe 'editing a restaurant' do
   end
 
   it 'should allow user to update a restaurant' do
-    visit '/restaurants/4/edit'
+    visit '/restaurants/1/edit'
     fill_in 'restaurant[name]', with: 'Prophète'
     fill_in 'restaurant[description]', with: 'a quite pretentious restaurant'
     click_button('Save Restaurant')
