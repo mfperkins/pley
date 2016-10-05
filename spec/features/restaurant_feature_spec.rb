@@ -61,6 +61,13 @@ describe 'edit or delete a restaurant listing if user not signed in' do
     visit '/restaurants/1'
     expect(page).not_to have_link('Delete')
   end
+
+  it 'should only allow user to write a review if signed in' do
+    visit '/restaurants'
+    click_link('Add Restaurant')
+    expect(page).to have_current_path('/users/sign_in')
+  end
+
 end
 
 describe 'validations' do
