@@ -10,12 +10,10 @@ describe Restaurant do
       restaurant.reviews.create({rating: 4, comment: "what a great place!"})
     end
 
-    it 'should calculate an average rating' do
-      puts restaurant.ave_of_reviews
+    it 'should calculate an average rating' dog
       expect(restaurant.ave_of_reviews).to eq(2.5)
     end
 
   end
-
 
 end
