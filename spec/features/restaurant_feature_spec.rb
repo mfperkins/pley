@@ -10,35 +10,35 @@ describe 'creating restaurant entry', type: :feature do
 end
 
 describe 'restaurant list' do
-  it 'shows all restaurants on index' do
-    visit '/restaurants/new'
-    fill_in 'restaurant[name]', with: 'Prophète'
-    fill_in 'restaurant[description]', with: 'a quite pretentious restaurant'
+  before(:each) do
+    create_restaurant
     click_button('Save Restaurant')
+  end
+
+  it 'shows all restaurants on index' do
     visit '/restaurants'
-    expect(page).to have_content 'Prophète'
+    expect(page).to have_content 'Pizzeria'
+  end
+
+  it 'should display the average rating for a restaurant' do
+    add_review(1)
+    click_button('Submit')
+    add_review(3)
+    click_button('Submit')
+    expect(page).to have_content 'Rating: 2.0'
   end
 end
 
-describe 'editing a restaurant' do
+describe 'edit or delete a restaurant listing' do
   before(:each) do
     @restaurant = Restaurant.new({name: "Restaurant", description: "A good restaurant"})
     @restaurant.save
   end
 
   it 'should allow user to update a restaurant' do
-    visit '/restaurants/1/edit'
-    fill_in 'restaurant[name]', with: 'Prophète'
-    fill_in 'restaurant[description]', with: 'a quite pretentious restaurant'
+    update_restaurant
     click_button('Save Restaurant')
     expect(page).to have_content 'Prophète'
-  end
-end
-
-describe 'deleting a restaurant' do
-  before(:each) do
-    @restaurant = Restaurant.new({name: "Rubbish Restaurant", description: "It should be deleted"})
-    @restaurant.save
   end
 
   it 'should allow user to delete a restaurant' do
