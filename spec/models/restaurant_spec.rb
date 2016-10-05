@@ -1,5 +1,21 @@
-require 'rails_helper'
+describe Restaurant do
 
-# RSpec.describe Restaurant, type: :model do
-#   pending "add some examples to (or delete) #{__FILE__}"
-# end
+  let(:restaurant) {Restaurant.new({name: "Restaurant", description: "A good restaurant"})}
+
+  describe 'Average rating' do
+
+    before(:each) do
+      restaurant.save
+      restaurant.reviews.create({rating: 1, comment: "what a terrible place!"})
+      restaurant.reviews.create({rating: 4, comment: "what a great place!"})
+    end
+
+    it 'should calculate an average rating' do
+      puts restaurant.ave_of_reviews
+      expect(restaurant.ave_of_reviews).to eq(2.5)
+    end
+
+  end
+
+
+end
