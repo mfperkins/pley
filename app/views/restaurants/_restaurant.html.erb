@@ -1,0 +1,23 @@
+
+
+<% @restaurants.each do |restaurant| %>
+  <hr>
+  <div class="row">
+    <div class="col-md-2">
+      <div>
+        <h4>Image</h4>
+      </div>
+      <div>
+        <h4>Rating</h4>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div>
+        <h4><%= link_to restaurant.name, restaurant_path(restaurant) %></h4>
+      </div>
+      <div>
+        <p><%= restaurant.description %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
