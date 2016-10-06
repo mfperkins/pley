@@ -4,11 +4,11 @@ class ReviewController < ApplicationController
   end
 
   def new
-      if user_signed_in?
-        @restaurant = Restaurant.find(params[:restaurant_id])
-        @review = Review.new
-      else
-        redirect_to new_user_session_path
+    if user_signed_in?
+      @restaurant = Restaurant.find(params[:restaurant_id])
+      @review = Review.new
+    else
+      redirect_to new_user_session_path
     end
   end
 

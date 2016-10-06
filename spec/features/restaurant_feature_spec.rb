@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'creating restaurant entry', type: :feature do
   it 'creates a new entry in restaurant table' do
+    user_sign_up
     expect {create_restaurant('Pizzeria')}.to change(Restaurant, :count).by(1)
     expect(page).to have_current_path('/restaurants/1')
     expect(page).to have_content('Pizzeria')
@@ -72,6 +73,7 @@ end
 
 describe 'validations' do
   it 'should not allow visitor to enter empty restaurant name' do
+    user_sign_up
     create_restaurant("")
     expect(page).to have_current_path '/restaurants/new'
     expect(page).to have_content "Name can't be blank"
