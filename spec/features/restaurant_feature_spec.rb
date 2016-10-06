@@ -34,9 +34,6 @@ describe 'edit or delete a restaurant listing if user signed in' do
     expect(page).to have_content 'rosie@allott.com'
     create_restaurant("Zombies")
     expect(page).to have_content 'Zombies'
-
-    # @restaurant = Restaurant.new({name: "Restaurant", description: "A good restaurant"})
-    # @restaurant.save
   end
 
   it 'should allow user to update a restaurant' do
