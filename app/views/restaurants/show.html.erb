@@ -1,18 +1,18 @@
 byebug
-<% puts @restaurant.name %>
+<% puts @restaurant.inspect %>
 <div class="row">
   <div class="col-md-12">
-    <h1><%= @restaurant.name %></h1>
+    <h1> <%= @restaurant.try(:name) %></h1>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
-    <p class="lead"><%= @restaurant.description %></p>
+    <p class="lead"><%= @restaurant.try(:description) %></p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
-    <p>Rating: <%= @restaurant.ave_of_reviews %></p>
+    <p>Rating: <%= @restaurant.try(:ave_of_reviews) %></p>
   </div>
 </div>
 <% if user_signed_in? %>
@@ -35,22 +35,32 @@ byebug
     <h2>Reviews</h2>
   </div>
   <div class="col-md-4">
-    <%= button_to "Add Review", new_restaurant_review_path(:restaurant_id => @restaurant.id), method: :get, id: "review_btn", :class => "btn btn-success pull-right" %>
+    <% if @restaurant.try(:id) %>
+      <%= button_to "Add Review", new_restaurant_review_path(:restaurant_id => @restaurant.id), method: :get, id: "review_btn", :class => "btn btn-success pull-right" %>
+    <% else %>
+      <%= notice %>
+      <%= alert %>
+    <% end %>
   </div>
 </div>
 
 <div class="row">
   <% i = 0 %>
-  <% @restaurant.reviews.each do |review| %>
-    <% i += 1 %>
-  <div class="col-md-8">
-    <h3><em><%= review.comment.slice(0).capitalize + review.comment.slice(1..15) + "..." %></em></h3>
-  </div>
-  <div class="col-md-4">
-    <h4 id="rating" class="pull-right">Rating: <%= review.rating %></h4>
-  </div>
-  <div id="comment" class="col-md-12">
-    <p><%= review.comment %></p>
-  </div>
+  <% if @restaurant.try(:reviews) %>
+    <% @restaurant.reviews.each do |review| %>
+      <% i += 1 %>
+    <div class="col-md-8">
+      <h3><em><%= review.comment.slice(0).capitalize + review.comment.slice(1..15) + "..." %></em></h3>
+    </div>
+    <div class="col-md-4">
+      <h4 id="rating" class="pull-right">Rating: <%= review.rating %></h4>
+    </div>
+    <div id="comment" class="col-md-12">
+      <p><%= review.comment %></p>
+    </div>
+    <% end %>
+  <% else %>
+    <%= notice %>
+    <%= alert %>
   <% end %>
 </div>

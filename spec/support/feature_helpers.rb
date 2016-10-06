@@ -25,6 +25,8 @@ module FeatureHelpers
   end
 
   def user_log_in
+    find('#dropdown_box').click
+    click_on("Log In")
     fill_in 'user[email]', with: "rosie@allott.com"
     fill_in 'user[password]', with: "password"
   end
@@ -32,6 +34,12 @@ module FeatureHelpers
   def user_log_out
     find('#dropdown_box').click
     click_on("Log Out")
+  end
+
+  def edit_restaurant(name)
+    fill_in 'restaurant[name]', with: name
+    fill_in 'restaurant[description]', with: 'a restaurant that serves pizza pie'
+    click_button('Save Restaurant')
   end
 
 end

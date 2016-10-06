@@ -22,8 +22,8 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find_by(user_id: 1)
-    # puts @restaurant.inspect
-    puts @restaurant.name
+    # puts @restaurant.columns
+    # puts @restaurant.name
   end
 
   def index
