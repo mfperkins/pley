@@ -51,16 +51,17 @@ end
 
 describe 'edit or delete a restaurant listing if user not signed in' do
   before(:each) do
-    @restaurant = Restaurant.new({name: "Restaurant", description: "A good restaurant"})
-    @restaurant.save
+    user_sign_up
+    create_restaurant("Delicious")
+    user_log_out
   end
 
-  it 'should allow user to update a restaurant' do
+  it 'should not allow user to update a restaurant' do
     visit '/restaurants/1'
     expect(page).not_to have_link('Edit')
   end
 
-  it 'should allow user to delete a restaurant' do
+  it 'should not allow user to delete a restaurant' do
     visit '/restaurants/1'
     expect(page).not_to have_link('Delete')
   end
