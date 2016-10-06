@@ -2,7 +2,6 @@ describe 'user actions' do
 
   it 'should allow user to sign up' do
     expect{user_sign_up}.to change(User, :count).by(1)
-    expect(page).to have_current_path '/restaurants'
     expect(page).to have_content 'rosie@allott.com'
   end
 
