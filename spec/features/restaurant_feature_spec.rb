@@ -35,7 +35,6 @@ describe 'edit or delete a restaurant listing if user signed in' do
     create_restaurant("Zombies")
     expect(page).to have_content 'Zombies'
 
-    click_link("/restaurant/1")
     # @restaurant = Restaurant.new({name: "Restaurant", description: "A good restaurant"})
     # @restaurant.save
   end
