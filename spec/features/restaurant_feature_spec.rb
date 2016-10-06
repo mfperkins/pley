@@ -30,20 +30,25 @@ end
 describe 'edit or delete a restaurant listing if user signed in' do
   before(:each) do
     visit '/'
-    user_log_in
+    user_sign_up
+    expect(page).to have_content 'rosie@allott.com'
+    create_restaurant("Zombies")
+    expect(page).to have_content 'Zombies'
+
+    click_link("/restaurant/1")
     # @restaurant = Restaurant.new({name: "Restaurant", description: "A good restaurant"})
     # @restaurant.save
   end
 
   it 'should allow user to update a restaurant' do
-    visit '/restaurants/1'
+    expect(page).to have_content 'Edit'
     click_link('Edit')
     edit_restaurant('Monster')
     expect(page).to have_content 'Monster'
   end
 
   it 'should allow user to delete a restaurant' do
-    visit '/restaurants/1'
+    expect(page).to have_content 'Edit'
     expect {click_link('Delete')}.to change(Restaurant, :count).by(-1)
   end
 end

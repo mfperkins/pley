@@ -21,9 +21,8 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    @restaurant = Restaurant.find_by(user_id: 1)
-    # puts @restaurant.columns
-    # puts @restaurant.name
+    user_id = @user.try(:id)
+    @restaurant = Restaurant.find_by(user_id: (user_id ||= 1)) #smell
   end
 
   def index
