@@ -21,7 +21,9 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    @restaurant = Restaurant.find(params[:id])
+    @restaurant = Restaurant.find_by(user_id: 1)
+    # puts @restaurant.inspect
+    puts @restaurant.name
   end
 
   def index
