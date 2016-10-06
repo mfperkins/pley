@@ -2,7 +2,8 @@ require 'rails_helper'
 
 module FeatureHelpers
   def create_restaurant(name)
-    visit '/restaurants/new'
+    visit '/'
+    click_link('Add Restaurant')
     fill_in 'restaurant[name]', with: name
     fill_in 'restaurant[description]', with: 'a restaurant that serves pizza pie'
     click_button('Save Restaurant')
@@ -21,6 +22,16 @@ module FeatureHelpers
     fill_in 'user[password]', with: "password"
     fill_in 'user[password_confirmation]', with: "password"
     click_button("Sign up")
+  end
+
+  def user_log_in
+    fill_in 'user[email]', with: "rosie@allott.com"
+    fill_in 'user[password]', with: "password"
+  end
+
+  def user_log_out
+    find('#dropdown_box').click
+    click_on("Log Out")
   end
 
 end
