@@ -32,6 +32,24 @@ describe 'user actions' do
     click_button('Log in')
     expect(page).not_to have_content 'rosie@allott.com'
     expect(page).to have_content 'Invalid Email or password.'
-
   end
+end
+
+describe 'logging in with facebook' do
+
+  before(:each) do
+    Rails.application.env_config["devise.mapping"] = Devise.mappings[:user]
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:facebook]
+  end
+
+  it 'should allow user to create an account with facebook' do
+    visit '/users/sign_up'
+    mock_auth_facebook_hash
+    click_link("Sign in with Facebook")
+    expect(page).to have_content("mattyperky@passiveaggressive.com")
+    expect(page).to have_current_path('/restaurants')
+  end
+
+  # it 'can handle an authentication error' do
+  # end
 end
