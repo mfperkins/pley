@@ -1,13 +1,17 @@
 class RestaurantsController < ApplicationController
   def new
     flash[:notice]
-    if !user_signed_in?
+    if user_signed_in?
+      @user = current_user
+      @restaurant = Restaurant.new
+    else
       redirect_to new_user_session_path
     end
   end
 
   def create
-    @restaurant = Restaurant.create(restaurant_params)
+    @user = current_user
+    @restaurant = @user.restaurants.create(restaurant_params)
       if @restaurant.save
         redirect_to @restaurant
       else
@@ -17,7 +21,8 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    @restaurant = Restaurant.find(params[:id])
+    user_id = @user.try(:id)
+    @restaurant = Restaurant.find_by(user_id: (user_id ||= 1)) #smell
   end
 
   def index
