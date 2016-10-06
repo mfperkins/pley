@@ -1,53 +1,66 @@
+byebug
+<% puts @restaurant.inspect %>
 <div class="row">
   <div class="col-md-12">
-    <h1><%= @restaurant.name %></h1>
+    <h1> <%= @restaurant.try(:name) %></h1>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
-    <p class="lead"><%= @restaurant.description %></p>
+    <p class="lead"><%= @restaurant.try(:description) %></p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
-    <p>Rating: <%= @restaurant.ave_of_reviews %></p>
+    <p>Rating: <%= @restaurant.try(:ave_of_reviews) %></p>
   </div>
 </div>
-<div class="row">
-  <div class="col-md-12">
-    <ul class="list-inline">
-      <li><h5 class="strong">Update restaurant:</h5></li>
-      <li><%= link_to 'Edit', edit_restaurant_path(@restaurant), :class => "btn btn-xs btn-primary" %></li>
-      <li><%= link_to 'Delete', restaurant_path(@restaurant),
-              :class => "btn btn-xs btn-danger",
-              method: :delete,
-              data: { confirm: 'Erm, really Dingy?' } %></li>
-    </ul>
+<% if user_signed_in? %>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-inline">
+        <li><h5 class="strong">Update restaurant:</h5></li>
+        <li><%= link_to 'Edit', edit_restaurant_path(@restaurant), :class => "btn btn-xs btn-primary" %></li>
+        <li><%= link_to 'Delete', restaurant_path(@restaurant),
+                :class => "btn btn-xs btn-danger",
+                method: :delete,
+                data: { confirm: 'Erm, really Dingy?' } %></li>
+      </ul>
+    </div>
   </div>
-</div>
+<% end %>
 <hr>
-
 <div class="row">
   <div class="col-md-8">
     <h2>Reviews</h2>
   </div>
   <div class="col-md-4">
-    <%= button_to "Add Review", new_restaurant_review_path(:restaurant_id => @restaurant.id), method: :get, id: "review_btn", :class => "btn btn-success pull-right" %>
+    <% if @restaurant.try(:id) %>
+      <%= button_to "Add Review", new_restaurant_review_path(:restaurant_id => @restaurant.id), method: :get, id: "review_btn", :class => "btn btn-success pull-right" %>
+    <% else %>
+      <%= notice %>
+      <%= alert %>
+    <% end %>
   </div>
 </div>
 
 <div class="row">
   <% i = 0 %>
-  <% @restaurant.reviews.each do |review| %>
-    <% i += 1 %>
-  <div class="col-md-8">
-    <h3><em><%= review.comment.slice(0).capitalize + review.comment.slice(1..15) + "..." %></em></h3>
-  </div>
-  <div class="col-md-4">
-    <h4 id="rating" class="pull-right">Rating: <%= review.rating %></h4>
-  </div>
-  <div id="comment" class="col-md-12">
-    <p><%= review.comment %></p>
-  </div>
+  <% if @restaurant.try(:reviews) %>
+    <% @restaurant.reviews.each do |review| %>
+      <% i += 1 %>
+    <div class="col-md-8">
+      <h3><em><%= review.comment.slice(0).capitalize + review.comment.slice(1..15) + "..." %></em></h3>
+    </div>
+    <div class="col-md-4">
+      <h4 id="rating" class="pull-right">Rating: <%= review.rating %></h4>
+    </div>
+    <div id="comment" class="col-md-12">
+      <p><%= review.comment %></p>
+    </div>
+    <% end %>
+  <% else %>
+    <%= notice %>
+    <%= alert %>
   <% end %>
 </div>
