@@ -10,6 +10,6 @@ describe 'uploading and viewing images' do
     fill_in 'restaurant[description]', with: 'a restaurant that serves pizza pie'
     page.attach_file('restaurant[image]', Rails.root + 'spec/features/broccoli.jpg')
     click_button('Save Restaurant')
-    expect(page).to have_xpath("//img[@src='broccoli.jpg']")
+    expect(page.find('#image_display')['src']).to have_content('broccoli.jpg')
   end
 end
