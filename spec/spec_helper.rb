@@ -18,6 +18,10 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'database_cleaner'
 require 'support/feature_helpers.rb'
+require 'support/omniauth_mock.rb'
+
+OmniAuth.config.test_mode = true
+
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -26,6 +30,8 @@ RSpec.configure do |config|
   # config.infer_spec_type_from_file_location!
 
   config.include FeatureHelpers, :type => :feature
+
+  config.include(OmniAuthTests)
 
   config.before(:each) do
     DatabaseCleaner.strategy = :transaction
@@ -48,6 +54,10 @@ RSpec.configure do |config|
 
   config.append_after(:each) do
     DatabaseCleaner.clean
+  end
+
+  config.after(:each) do
+    Warden.test_reset!
   end
 
 
