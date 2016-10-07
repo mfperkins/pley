@@ -21,7 +21,7 @@ Enjoy ...
 
 Made by:
 
-* [Scrumpy](https://github.com/alfie-ab)
+* [Fuzzy Peg](https://github.com/alfie-ab)
 * [Dingy](https://github.com/mfperkins)
 * [Chanting](https://github.com/rosieallott)
 * [Bushy Fox](https://github.com/ewansheldon)
