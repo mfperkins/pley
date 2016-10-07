@@ -21,8 +21,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    user_id = @user.try(:id)
-    @restaurant = Restaurant.find_by(user_id: (user_id ||= 1)) #smell
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def index
@@ -51,6 +50,6 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :description)
+    params.require(:restaurant).permit(:name, :description, :image)
   end
 end
