@@ -21,8 +21,8 @@ Enjoy ...
 
 Made by:
 
-(Scrumpy)[https://github.com/alfie-ab]
-(Dingy)[https://github.com/mfperkins]
-(Chanting)[https://github.com/rosieallott]
-(Bushy Fox)[https://github.com/ewansheldon]
-(Scooter Mahoy)[https://github.com/tam-borine]
+[Scrumpy](https://github.com/alfie-ab)
+[Dingy](https://github.com/mfperkins)
+[Chanting](https://github.com/rosieallott)
+[Bushy Fox](https://github.com/ewansheldon)
+[Scooter Mahoy](https://github.com/tam-borine)
