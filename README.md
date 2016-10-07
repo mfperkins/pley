@@ -6,7 +6,7 @@ This is a copy of Yelp! Well, a very limited copy, but a copy nonetheless. Techn
 * Omniauth for FB logins
 * Heroku & Amazon S3
 
-You can check it out (here)[https://limitless-wildwood-62359.herokuapp.com]
+You can check it out [here](https://limitless-wildwood-62359.herokuapp.com)
 
 If you want to run it locally follow these instructions:
 
