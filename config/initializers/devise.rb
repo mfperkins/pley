@@ -4,7 +4,7 @@ require 'omniauth-facebook'
 
 Devise.setup do |config|
 
-  config.omniauth :facebook, 642706932577257, ENV["FB_PLEY_APP_SECRET"]
+  config.omniauth :facebook, ENV["FB_APP_ID"], ENV["FB_PLEY_APP_SECRET"]
                               # callback_url: 'https://localhost:3000/sign_in'
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
