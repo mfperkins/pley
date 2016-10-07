@@ -1,20 +1,15 @@
 <div class="row">
-  <div class="col-md-12">
-    <h1> <%= @restaurant.name %></h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <p class="lead"><%= @restaurant.description %></p>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <p>Rating: <%= @restaurant.ave_of_reviews %></p>
-  </div>
-</div>
-<% if user_signed_in? %>
-  <div class="row">
+  <div class="col-md-8">
+    <div class="col-md-12">
+      <h1> <%= @restaurant.name %></h1>
+    </div>
+    <div class="col-md-12">
+      <p class="lead"><%= @restaurant.description %></p>
+    </div>
+    <div class="col-md-12">
+      <p>Rating: <%= @restaurant.ave_of_reviews %></p>
+    </div>
+    <% if user_signed_in? %>
     <div class="col-md-12">
       <ul class="list-inline">
         <li><h5 class="strong">Update restaurant:</h5></li>
@@ -26,6 +21,10 @@
       </ul>
     </div>
   </div>
+  <div class="col-md-4">
+    <%= image_tag @restaurant.image.url(:medium), :id => "image_display" %>
+  </div>
+</div>
 <% end %>
 <hr>
 <div class="row">
